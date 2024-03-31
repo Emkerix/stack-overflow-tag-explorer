@@ -1,0 +1,88 @@
+.tableTags {
+  padding: 20px 20px 10px 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableTags label {
+  text-align: left;
+  font-size: 13px;
+  padding-left: 4px;
+  color: #242424;
+}
+
+.tableTags nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 5px 0;
+  border: 0;
+}
+
+.tableTags .CustomNumberInput {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 6px;
+  color: #c7d0dd;
+  background: #242424;
+  display: grid;
+  grid-template-columns: 1fr 19px;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  column-gap: 8px;
+  padding: 4px;
+}
+
+.tableTags .CustomNumberInput .input {
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  color: #c7d0dd;
+  background: inherit;
+  border: none;
+  border-radius: inherit;
+  padding: 8px 12px;
+  outline: 0;
+}
+
+.tableTags .CustomNumberInput .input:focus-visible {
+  outline: 0;
+}
+
+.tableTags .CustomNumberInput .btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  padding: 0;
+  width: 19px;
+  height: 19px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1;
+  box-sizing: border-box;
+  background: #242424;
+  border: 0;
+  color: #c7d0dd;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 120ms;
+}
+
+.tableTags .CustomNumberInput .btn:hover {
+  background: #303740;
+  border-color: #c7d0dd;
+  cursor: pointer;
+}
+
+.tableTags .CustomNumberInput button {
+  display: none;
+}
+
+.tableTags .MuiCircularProgress-circle {
+  color: #242424;
+}
