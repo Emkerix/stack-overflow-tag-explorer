@@ -9,7 +9,7 @@ export default function TagTableRowError({ error }: TagTableRowErrorProps) {
   return (
     <TableRow>
       <TableCell colSpan={2} align="center">
-        {error.error_name}
+        {error.error_message}
       </TableCell>
     </TableRow>
   )
