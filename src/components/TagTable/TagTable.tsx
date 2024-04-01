@@ -24,16 +24,8 @@ const DEBOUNCE_TIME = 320
 
 function TagTable() {
   const dispatch = useAppDispatch()
-  const {
-    tags,
-    quotaRemaining,
-    totalPages,
-    isLoading,
-    error,
-    page,
-    order,
-    rowsPerPage,
-  } = useAppSelector((state: RootState) => state.tagExplorer)
+  const { tags, totalPages, isLoading, error, page, order, rowsPerPage } =
+    useAppSelector((state: RootState) => state.tagExplorer)
 
   useEffect(() => {
     dispatch(fetchDataThunk({ page, order, rowsPerPage }))
@@ -73,7 +65,6 @@ function TagTable() {
         onChange={(_, value) => dispatch(setPage(value))}
         count={totalPages}
       />
-      <p>Number of remaining quota: {quotaRemaining}</p>
     </TableContainer>
   )
 }

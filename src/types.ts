@@ -28,7 +28,6 @@ export interface TagExplorerState {
   rowsPerPage: number
   order: "asc" | "desc"
   tags: Tag[]
-  quotaRemaining: number
   isLoading: boolean
   error: Partial<TagResponseError>
 }

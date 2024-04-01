@@ -8,7 +8,6 @@ const initialState: TagExplorerState = {
   rowsPerPage: 10,
   order: "asc",
   tags: [],
-  quotaRemaining: 0,
   isLoading: false,
   error: {},
 }
@@ -60,9 +59,6 @@ const tagExplorerSlice = createSlice({
     setTags: (state, action) => {
       state.tags = action.payload
     },
-    setQuotaRemaining: (state, action) => {
-      state.quotaRemaining = action.payload
-    },
     setLoading: (state, action) => {
       state.isLoading = action.payload
     },
@@ -85,7 +81,6 @@ const tagExplorerSlice = createSlice({
           state.error = action.payload
         } else {
           state.tags = action.payload.items
-          state.quotaRemaining = action.payload.quota_remaining
           state.totalPages = Math.ceil(action.payload.total / state.rowsPerPage)
         }
 
@@ -108,7 +103,6 @@ export const {
   setRowsPerPage,
   setOrder,
   setTags,
-  setQuotaRemaining,
   setLoading,
   setError,
 } = tagExplorerSlice.actions
