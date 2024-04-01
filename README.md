@@ -77,6 +77,6 @@ To get started, follow these steps:
 
 ## Screenshots
 ![Untitled](https://github.com/Emkerix/stack-overflow-tag-explorer/assets/92579344/e5702b14-3459-4ed8-9546-f93dc1a9767f)
-
+![Screenshot 2024-04-01 at 23-02-17 TagTableHead - Docs ⋅ Storybook](https://github.com/Emkerix/stack-overflow-tag-explorer/assets/92579344/5a3b537c-34ed-44ea-8f96-4a57912a3535)
 
 
