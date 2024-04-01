@@ -74,3 +74,9 @@ To get started, follow these steps:
 [Material UI]: https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white
 [Axios]: https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white
 [Lodash]: https://img.shields.io/badge/-3492FF?style=for-the-badge&logo=lodash&logoColor=white
+
+## Screenshots
+![Untitled](https://github.com/Emkerix/stack-overflow-tag-explorer/assets/92579344/e5702b14-3459-4ed8-9546-f93dc1a9767f)
+
+
+
