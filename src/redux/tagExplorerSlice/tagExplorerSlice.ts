@@ -12,7 +12,7 @@ const initialState: TagExplorerState = {
   error: {},
 }
 
-const FILTER = "!nNPvSNVZJS"
+const FILTER = "!etHx()B6O(4ma)x7t3RP(S"
 
 export const fetchDataThunk = createAsyncThunk(
   "tagExplorer/fetchData",
@@ -32,6 +32,7 @@ export const fetchDataThunk = createAsyncThunk(
       const URL = `https://api.stackexchange.com/2.3/tags?page=${page}&order=${order}&sort=name&pagesize=${rowsPerPage}&site=stackoverflow&filter=${FILTER}`
 
       const response: AxiosResponse<TagResponse> = await axios.get(URL)
+      console.log(response.data)
 
       return response.data
     } catch (error) {

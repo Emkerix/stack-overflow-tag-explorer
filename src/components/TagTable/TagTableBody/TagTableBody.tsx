@@ -1,5 +1,5 @@
 import { TableBody } from "@mui/material"
-import { Tag, TagResponseError } from "../../../types"
+import { TagItem, TagResponseError } from "../../../types"
 import TagTableRowLoading from "./TagTableRowLoading"
 import TagTableRowError from "./TagTableRowError"
 import TagTableRowItem from "./TagTableRowItem"
@@ -7,7 +7,7 @@ import TagTableRowItem from "./TagTableRowItem"
 interface TagTableBodyProps {
   isLoading: boolean
   error: Partial<TagResponseError>
-  tags: Tag[]
+  tags: TagItem[]
 }
 
 export default function TagTableBody({
@@ -21,7 +21,7 @@ export default function TagTableBody({
       {!isLoading && "error_id" in error && <TagTableRowError error={error} />}
       {!isLoading &&
         !("error_id" in error) &&
-        tags.map((tag) => <TagTableRowItem key={tag.name} tag={tag} />)}
+        tags.map((tag, index) => <TagTableRowItem key={index} tag={tag} />)}
     </TableBody>
   )
 }

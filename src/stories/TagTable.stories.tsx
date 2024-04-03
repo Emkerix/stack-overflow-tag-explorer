@@ -8,10 +8,10 @@ export default {
   tags: ["autodocs"],
 }
 
-const Template = (args: any) => {
+const Template = () => {
   return (
     <Provider store={store}>
-      <TagTable {...args} />
+      <TagTable />
     </Provider>
   )
 }

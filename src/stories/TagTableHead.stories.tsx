@@ -6,7 +6,7 @@ export default {
   tags: ["autodocs"],
 }
 
-let order = "asc"
+const order = "asc"
 
 export const Default = {
   args: {

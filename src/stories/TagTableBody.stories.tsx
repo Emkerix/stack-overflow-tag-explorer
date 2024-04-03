@@ -8,25 +8,16 @@ export default {
 
 const tags = [
   {
-    has_synonyms: false,
-    is_moderator_only: false,
-    is_required: false,
-    count: 0,
-    name: "announcement",
+    count: 74,
+    name: ".net-client-profile",
   },
   {
-    has_synonyms: false,
-    is_moderator_only: false,
-    is_required: false,
-    count: 1,
-    name: "deno-kv",
+    count: 45019,
+    name: ".net-core",
   },
   {
-    has_synonyms: false,
-    is_moderator_only: false,
-    is_required: false,
-    count: 1,
-    name: "postbank-pdf2csv",
+    count: 30,
+    name: ".net-core-1.1",
   },
 ]
 

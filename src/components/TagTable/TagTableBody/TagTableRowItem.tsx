@@ -1,17 +1,18 @@
 import { TableCell, TableRow } from "@mui/material"
-import { Tag } from "../../../types"
+import { TagItem } from "../../../types"
 
-interface TagTableRowItemProps {
-  tag: Tag
+interface TagTableItemProps {
+  tag: TagItem
 }
 
-export default function TagTableRowItem({ tag }: TagTableRowItemProps) {
+export default function TagTableRowItem({ tag }: TagTableItemProps) {
+  const { name, count } = tag
   return (
     <TableRow>
       <TableCell component="th" scope="row">
-        {tag.name}
+        {name}
       </TableCell>
-      <TableCell align="right">{tag.count}</TableCell>
+      <TableCell align="right">{count}</TableCell>
     </TableRow>
   )
 }
