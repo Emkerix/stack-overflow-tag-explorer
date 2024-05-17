@@ -46,6 +46,7 @@ To get started, follow these steps:
 - A MUI element for sorting by the `name` tag.
 - Utilized Redux library for state management, handling loading states and error conditions during data retrieval.
 - Utilized Axios library for data fetching.
+- Utilized Storybook for showcasing and testing UI components.
 
 ## Default Settings
 
