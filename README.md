@@ -43,7 +43,6 @@ To get started, follow these steps:
 ## Features
 
 - Paginated table of tags with the count of associated posts, utilizing MUI components.
-- Configurable dynamic number of elements per page via a numeric field positioned above the table. The numeric input field is debounced to limit the frequency of API requests. Utilized Unstable_NumberInput component from MUI to prevent invalid input.
 - A MUI element for sorting by the `name` tag.
 - Utilized Redux library for state management, handling loading states and error conditions during data retrieval.
 - Utilized Axios library for data fetching.
@@ -74,9 +73,3 @@ To get started, follow these steps:
 [Material UI]: https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white
 [Axios]: https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white
 [Lodash]: https://img.shields.io/badge/-3492FF?style=for-the-badge&logo=lodash&logoColor=white
-
-## Screenshots
-![Untitled](https://github.com/Emkerix/stack-overflow-tag-explorer/assets/92579344/e5702b14-3459-4ed8-9546-f93dc1a9767f)
-![Screenshot 2024-04-01 at 23-02-17 TagTableHead - Docs ⋅ Storybook](https://github.com/Emkerix/stack-overflow-tag-explorer/assets/92579344/5a3b537c-34ed-44ea-8f96-4a57912a3535)
-
-

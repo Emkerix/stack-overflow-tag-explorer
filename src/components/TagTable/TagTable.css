@@ -86,3 +86,12 @@
 .tableTags .MuiCircularProgress-circle {
   color: #242424;
 }
+
+.tableTags .MuiTablePagination-spacer {
+  display: none;
+}
+
+.tableTags .MuiTablePagination-toolbar {
+  display: flex;
+  justify-content: center;
+}

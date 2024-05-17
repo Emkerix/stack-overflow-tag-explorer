@@ -1,12 +1,6 @@
 import { useEffect } from "react"
 import { RootState } from "../../redux/store"
-import {
-  InputLabel,
-  Pagination,
-  Paper,
-  Table,
-  TableContainer,
-} from "@mui/material"
+import { Paper, Table, TableContainer, TablePagination } from "@mui/material"
 import TagTableHead from "./TagTableHead/TagTableHead"
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import {
@@ -15,12 +9,9 @@ import {
   setPage,
   setRowsPerPage,
 } from "../../redux/tagExplorerSlice/tagExplorerSlice"
-import { Unstable_NumberInput as BaseNumberInput } from "@mui/base/Unstable_NumberInput"
-import debounce from "lodash.debounce"
+
 import TagTableBody from "./TagTableBody/TagTableBody"
 import "./TagTable.css"
-
-const DEBOUNCE_TIME = 320
 
 function TagTable() {
   const dispatch = useAppDispatch()
@@ -31,40 +22,40 @@ function TagTable() {
     dispatch(fetchDataThunk({ page, order, rowsPerPage }))
   }, [dispatch, page, order, rowsPerPage])
 
-  const handleRowsPerPageChange = (
+  const handleChangePage = (event: unknown, newPage: number) => {
+    dispatch(setPage(newPage + 1))
+  }
+
+  const handleChangeRowsPerPage = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    let newRowsPerPage = parseInt(event.target.value, 10)
-    if (isNaN(newRowsPerPage)) {
-      return
-    }
-    newRowsPerPage = Math.min(Math.max(newRowsPerPage, 1), 100)
-    dispatch(setRowsPerPage(newRowsPerPage))
+    dispatch(setRowsPerPage(parseInt(event.target.value, 10)))
+    dispatch(setPage(1))
   }
 
   return (
     <TableContainer component={Paper} className="tableTags">
-      <InputLabel>Number of tags per page:</InputLabel>
-      <BaseNumberInput
-        required
-        min={1}
-        max={100}
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25, 50, 75, 100]}
+        colSpan={3}
+        count={totalPages}
+        rowsPerPage={rowsPerPage}
+        page={page - 1}
         slotProps={{
-          root: { className: "CustomNumberInput" },
-          input: { className: "input" },
+          select: {
+            inputProps: {
+              "aria-label": "rows per page",
+            },
+            native: true,
+          },
         }}
-        defaultValue={rowsPerPage}
-        onInputChange={debounce(handleRowsPerPageChange, DEBOUNCE_TIME)}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
       />
       <Table>
         <TagTableHead order={order} setOrder={() => dispatch(setOrder())} />
         <TagTableBody isLoading={isLoading} error={error} tags={tags} />
       </Table>
-      <Pagination
-        page={page}
-        onChange={(_, value) => dispatch(setPage(value))}
-        count={totalPages}
-      />
     </TableContainer>
   )
 }
